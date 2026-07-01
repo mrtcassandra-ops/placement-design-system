@@ -344,6 +344,84 @@
         </div>
       </div>
 
+      <div class="subgroup-label">Filiales du groupe</div>
+      <p class="lede" style="margin-top:-6px">
+        Palettes des sociétés du groupe, à mobiliser sur les supports co-brandés
+        ou lorsqu'une filiale est mise en avant. Conserver les couleurs propres à
+        chaque marque&nbsp;; ne pas les mélanger avec la palette Stellium&nbsp;Placement.
+      </p>
+      <div class="filiale-grid">
+
+        <div class="filiale-card">
+          <div class="fil-logo"><img src="assets/filiales/finzzle-groupe.png" alt="Finzzle groupe"></div>
+          <div class="fil-name">Finzzle groupe</div>
+          <div class="fil-swatches">
+            <button class="fil-sw" style="background:#0035B9; color:#fff" data-copy="#0035B9">
+              <span class="fs-role">Principale</span>
+              <span class="fs-hex">#0035B9</span>
+              <span class="fs-rgb">0 · 53 · 185</span>
+            </button>
+            <button class="fil-sw" style="background:#95E7D8; color:#0E3145" data-copy="#95E7D8">
+              <span class="fs-role">Secondaire</span>
+              <span class="fs-hex">#95E7D8</span>
+              <span class="fs-rgb">149 · 231 · 216</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="filiale-card">
+          <div class="fil-logo"><img src="assets/filiales/prodemial.png" alt="Prodemial"></div>
+          <div class="fil-name">Prodemial</div>
+          <div class="fil-swatches">
+            <button class="fil-sw" style="background:#BD1D1D; color:#fff" data-copy="#BD1D1D">
+              <span class="fs-role">Principale</span>
+              <span class="fs-hex">#BD1D1D</span>
+              <span class="fs-rgb">189 · 29 · 29</span>
+            </button>
+            <button class="fil-sw" style="background:#000000; color:#fff" data-copy="#000000">
+              <span class="fs-role">Noir</span>
+              <span class="fs-hex">#000000</span>
+              <span class="fs-rgb">0 · 0 · 0</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="filiale-card">
+          <div class="fil-logo"><img src="assets/filiales/stellium-financement.png" alt="Stellium Financement"></div>
+          <div class="fil-name">Stellium Financement</div>
+          <div class="fil-swatches">
+            <button class="fil-sw" style="background:#0075DC; color:#fff" data-copy="#0075DC">
+              <span class="fs-role">Principale</span>
+              <span class="fs-hex">#0075DC</span>
+              <span class="fs-rgb">0 · 117 · 220</span>
+            </button>
+            <button class="fil-sw" style="background:#F66E50; color:#fff" data-copy="#F66E50">
+              <span class="fs-role">Accompagnement</span>
+              <span class="fs-hex">#F66E50</span>
+              <span class="fs-rgb">246 · 110 · 80</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="filiale-card">
+          <div class="fil-logo"><img src="assets/filiales/stellium-immobilier.png" alt="Stellium Immobilier"></div>
+          <div class="fil-name">Stellium Immobilier</div>
+          <div class="fil-swatches">
+            <button class="fil-sw" style="background:#85AD39; color:#fff" data-copy="#85AD39">
+              <span class="fs-role">Principale</span>
+              <span class="fs-hex">#85AD39</span>
+              <span class="fs-rgb">133 · 173 · 57</span>
+            </button>
+            <button class="fil-sw" style="background:#0E3145; color:#fff" data-copy="#0E3145">
+              <span class="fs-role">Accompagnement</span>
+              <span class="fs-hex">#0E3145</span>
+              <span class="fs-rgb">14 · 49 · 69</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
       <div class="usage-bar">
         <h4>Proportions d'usage</h4>
         <div class="usage-row">
@@ -1107,6 +1185,17 @@ document.addEventListener('click', e => {
     navigator.clipboard?.writeText(code);
     const hexEl = cell.querySelector('.rc-hex');
     const target = hexEl || cell;
+    const prev = target.textContent;
+    target.textContent = 'Copié ✓';
+    setTimeout(() => target.textContent = prev, 1100);
+    return;
+  }
+  const sw = e.target.closest('.fil-sw');
+  if (sw) {
+    const code = sw.dataset.copy;
+    navigator.clipboard?.writeText(code);
+    const hexEl = sw.querySelector('.fs-hex');
+    const target = hexEl || sw;
     const prev = target.textContent;
     target.textContent = 'Copié ✓';
     setTimeout(() => target.textContent = prev, 1100);
