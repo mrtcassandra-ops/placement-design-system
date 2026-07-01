@@ -150,7 +150,7 @@
 
       <h3><span class="num">01</span> Couleur principale</h3>
       <div class="color-grid primary">
-        <div class="swatch primary">
+        <div class="swatch primary" style="background:var(--sp-pink); color:#fff">
           <div class="chip" style="height:auto; flex:1; min-height:300px; background:var(--sp-pink)">
             <div class="label">Stellium Pink · Principale</div>
           </div>
@@ -190,8 +190,8 @@
               <div class="note">Surface de repos. Alternative chaleureuse au blanc pur — pour le print et les surfaces de fond.</div>
               <div class="tokens">
                 <div><b>HEX</b><span>#F8F6F4</span><button class="copy-chip" data-copy="#F8F6F4">Copier</button></div>
-                <div><b>RGB</b><span>246, 241, 234</span></div>
-                <div><b>CMJN</b><span>3, 4, 7, 0</span></div>
+                <div><b>RGB</b><span>248, 246, 244</span></div>
+                <div><b>CMJN</b><span>0, 1, 2, 3</span></div>
               </div>
             </div>
           </div>
@@ -783,7 +783,7 @@
 
       <div class="subgroup-label">Papeterie</div>
 
-      <div class="app-grid" style="grid-template-columns: 1.4fr 1fr;">
+      <div class="app-grid" style="grid-template-columns: 1fr;">
         <!-- Business cards -->
         <div class="app-tile">
           <div class="stat-stage">
@@ -821,70 +821,30 @@
           </div>
         </div>
 
-        <!-- Letterhead -->
+        <!-- Email signature with photo -->
         <div class="app-tile">
-          <div class="letterhead-stage">
-            <div class="letterhead">
-              <div class="corner-accent"></div>
-              <div class="head">
-                <img src="assets/logo-stellium-placement.png" alt="Stellium">
-                <svg class="stars" viewBox="0 0 200 160"><use href="#cluster"/></svg>
-              </div>
-              <div class="meta-strip">Paris, le 14 mai 2026</div>
-              <div class="body">
-                <div class="recipient">
-                  <b>Madame Sophie Lambert</b><br>
-                  24 avenue Marceau<br>
-                  75008 Paris
-                </div>
-                <div class="object">Objet&nbsp;: Bilan patrimonial — proposition d'allocation</div>
-                <div class="lines">
-                  <div class="line s60"></div>
-                  <div class="line s90"></div>
-                  <div class="line s80"></div>
-                  <div class="line s90"></div>
-                  <div class="line s40"></div>
-                  <div class="line s80"></div>
-                  <div class="line s90"></div>
-                  <div class="line s60"></div>
-                </div>
-              </div>
-              <div class="foot">
-                <span>stellium-placement.fr</span>
-                <span>SAS · RCS Paris</span>
-              </div>
+          <div class="letterhead-stage" style="display:grid;place-items:center;">
+            <div style="background:#ffffff;border-radius:12px;padding:30px 34px;box-shadow:0 30px 60px -30px rgba(7,18,28,.5);">
+              <table cellpadding="0" cellspacing="0" border="0" style="font-family:Arial,Helvetica,sans-serif;border-collapse:collapse;">
+                <tbody><tr style="vertical-align:middle;">
+                  <td style="padding-right:16px;vertical-align:middle;">
+                    <div style="width:72px;height:90px;border-radius:10px;background:#0E3145;color:#ffffff;font-family:Arial,sans-serif;font-size:26px;font-weight:bold;text-align:center;line-height:90px;">CD</div>
+                  </td>
+                  <td style="padding:0;width:3px;"><div style="width:3px;height:90px;background:linear-gradient(180deg,#ffffff,#DC216E);"></div></td>
+                  <td style="padding-left:16px;vertical-align:middle;">
+                    <p style="margin:0 0 1px 0;font-size:15px;font-weight:bold;color:#0E3145;">Camille Dubois</p>
+                    <p style="margin:0 0 8px 0;font-size:9px;color:#DC216E;text-transform:uppercase;letter-spacing:1.2px;">Conseillère patrimoniale</p>
+                    <p style="margin:0 0 2px 0;font-size:11px;color:#444;line-height:1.8;">+33 1 84 88 32 04 &nbsp;·&nbsp; <a href="mailto:camille.dubois@stellium.fr" style="color:#DC216E;text-decoration:none;">camille.dubois@stellium.fr</a> &nbsp;·&nbsp; <a href="#" style="color:#0E3145;font-weight:bold;text-decoration:none;">in</a></p>
+                    <p style="margin:0;font-size:10px;color:#999;">12 rue de la Paix · 75002 Paris</p>
+                  </td>
+                  <td style="padding-left:22px;vertical-align:middle;"><img src="assets/etoiles-bleu-rose.png" width="54" height="42" alt="Stellium" style="display:block;"></td>
+                </tr></tbody>
+              </table>
             </div>
           </div>
           <div class="caption">
-            <span class="t">En-tête de courrier</span>
-            <span class="s">A4 · 210 × 297 mm</span>
-          </div>
-        </div>
-
-        <!-- Envelope -->
-        <div class="app-tile" style="grid-column: 1 / -1">
-          <div class="envelope-stage">
-            <div class="envelope">
-              <div class="flap-line"></div>
-              <div class="return">
-                <img src="assets/logo-stellium-placement.png" alt="">
-                <span>12 rue de la Paix<br>75002 Paris</span>
-              </div>
-              <div class="stamp-side">Lettre verte<br>20 g</div>
-              <div class="stamp">
-                <svg viewBox="0 0 200 160" style="color:#fff"><use href="#cluster-mono"/></svg>
-              </div>
-              <div class="addr">
-                <b>Madame Sophie Lambert</b><br>
-                24 avenue Marceau<br>
-                75008 Paris
-              </div>
-              <div class="accent-strip"></div>
-            </div>
-          </div>
-          <div class="caption">
-            <span class="t">Enveloppe DL</span>
-            <span class="s">110 × 220 mm</span>
+            <span class="t">Signature e-mail · avec photo</span>
+            <span class="s">Outlook / Gmail</span>
           </div>
         </div>
       </div>
@@ -931,7 +891,13 @@
           </div>
           <div class="caption">
             <span class="t">Présentation commerciale · masque 2026</span>
-            <span class="s">35 slides · 16:9</span>
+            <span style="display:flex;gap:18px;align-items:center;">
+              <a class="btn btn-link" href="templates/stellium-deck/StelliumDeck.dc.html" style="font-size:13px;">Ouvrir le masque →</a>
+              <a class="btn btn-pink" href="assets/Masque-Stellium-Placement.pptx" download style="font-size:13px;padding:8px 16px;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="M7 10l5 5 5-5"></path><path d="M12 15V3"></path></svg>
+                Télécharger (.pptx) · 35 slides
+              </a>
+            </span>
           </div>
         </div>
 
@@ -968,27 +934,36 @@
           </div>
         </div>
 
-        <!-- Email signature -->
-        <div class="app-tile">
-          <div class="stat-stage" style="min-height:0;padding:48px 30px;">
-            <div style="background:#fff;border-radius:12px;padding:26px 30px;box-shadow:0 18px 36px -26px rgba(14,49,69,.45);">
-              <table cellpadding="0" cellspacing="0" border="0" style="font-family:Arial,Helvetica,sans-serif;border-collapse:collapse;">
-                <tbody><tr>
-                  <td style="padding-right:14px;vertical-align:middle;"><img src="assets/etoiles-bleu-rose.png" width="62" height="48" alt="Stellium" style="display:block;"></td>
-                  <td style="padding:0;width:3px;"><div style="width:3px;height:80px;background:linear-gradient(180deg,#ffffff,#DC216E);"></div></td>
-                  <td style="padding-left:14px;vertical-align:middle;">
-                    <p style="margin:0 0 1px 0;font-size:14px;font-weight:bold;color:#0E3145;">Cassandra Morant</p>
-                    <p style="margin:0 0 7px 0;font-size:8px;color:#DC216E;text-transform:uppercase;letter-spacing:1.1px;">Chargée de communication &amp; marketing produits</p>
-                    <p style="margin:0 0 2px 0;font-size:10px;color:#444;line-height:1.7;">05 67 73 31 42 &nbsp;·&nbsp; <a href="mailto:cassandra.morant@stellium.fr" style="color:#DC216E;text-decoration:none;">cassandra.morant@stellium.fr</a> &nbsp;·&nbsp; <a href="#" style="color:#0E3145;font-weight:bold;text-decoration:none;">in</a></p>
-                    <p style="margin:0;font-size:9px;color:#999;">11 avenue Parmentier · CS 70117 · 31201 Toulouse Cedex 2</p>
-                  </td>
-                </tr></tbody>
-              </table>
+        <!-- Email signature generator -->
+        <div class="app-tile sig-gen" style="grid-column:1 / -1">
+          <div class="sig-gen-head">
+            <div class="subgroup-label" style="margin:0">Générateur de signature</div>
+            <p style="margin:6px 0 0;font-size:13px;color:var(--ink-muted);max-width:64ch;line-height:1.55;">Renseignez les coordonnées : la signature se génère en direct. Copiez la version voulue, prête à coller dans Outlook ou Gmail.</p>
+          </div>
+          <div class="sig-gen-grid">
+            <form class="sig-form" id="sigForm" autocomplete="off">
+              <label class="sig-field"><span>Nom</span><input name="name" value="Cassandra Morant"></label>
+              <label class="sig-field"><span>Fonction</span><input name="role" value="Chargée de communication &amp; marketing produits"></label>
+              <label class="sig-field"><span>Téléphone</span><input name="phone" value="05 67 73 31 42"></label>
+              <label class="sig-field"><span>Email</span><input name="email" value="cassandra.morant@stellium.fr"></label>
+              <label class="sig-field"><span>LinkedIn (URL)</span><input name="linkedin" value="https://www.linkedin.com/company/stellium-courtage-invest/"></label>
+              <label class="sig-field"><span>Adresse</span><input name="address" value="11 avenue Parmentier · CS 70117 · 31201 Toulouse Cedex 2"></label>
+              <label class="sig-field"><span>Photo (URL — optionnel)</span><input name="photoUrl" value="" placeholder="https://…  ou vide → initiales"></label>
+            </form>
+            <div class="sig-preview">
+              <div class="sig-card">
+                <div class="sig-card-head"><span>Avec photo</span><button type="button" class="btn btn-pink sig-copy" data-variant="photo" style="font-size:12px;padding:7px 15px">Copier</button></div>
+                <div class="sig-stage" id="sigPreviewPhoto"></div>
+              </div>
+              <div class="sig-card">
+                <div class="sig-card-head"><span>Sans photo</span><button type="button" class="btn btn-ghost sig-copy" data-variant="nophoto" style="font-size:12px;padding:7px 15px;color:var(--sp-navy);border-color:var(--line-strong)">Copier</button></div>
+                <div class="sig-stage" id="sigPreviewNoPhoto"></div>
+              </div>
             </div>
           </div>
           <div class="caption">
-            <span class="t">Signature e-mail</span>
-            <span class="s">HTML · compatible Outlook &amp; Gmail</span>
+            <span class="t">Signature e-mail · générateur</span>
+            <span class="s">Copier-coller dans Outlook / Gmail</span>
           </div>
         </div>
       </div>
@@ -1174,6 +1149,79 @@ const observer = new IntersectionObserver((entries) => {
 }, { rootMargin: '-30% 0px -60% 0px' });
 
 sections.forEach(s => observer.observe(s));
+
+/* ============================================================
+   SIGNATURE E-MAIL — générateur inline
+   ============================================================ */
+(function(){
+  const form = document.getElementById('sigForm');
+  if(!form) return;
+  const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  const initials = n => (n||'').split(/\s+/).filter(Boolean).slice(0,2).map(s=>s[0]||'').join('').toUpperCase();
+  function vals(){
+    const d = {};
+    new FormData(form).forEach((v,k)=>d[k]=String(v).trim());
+    return d;
+  }
+  function build(withPhoto){
+    const v = vals();
+    const stars = window.SIG_STARS || 'assets/etoiles-bleu-rose.png';
+    const grad  = window.SIG_GRAD || '';
+    const mailto = 'mailto:'+v.email;
+    const linkedinHref = v.linkedin || '#';
+    let leftCell, rightCell='';
+    if(withPhoto){
+      if(v.photoUrl){
+        leftCell = `<td style="padding-right:16px;vertical-align:middle;"><img src="${esc(v.photoUrl)}" width="72" height="90" alt="${esc(v.name)}" style="display:block;width:72px;height:90px;border-radius:10px;object-fit:cover;" /></td>`;
+      } else {
+        leftCell = `<td style="padding-right:16px;vertical-align:middle;"><div style="width:72px;height:90px;border-radius:10px;background:#0E3145;color:#ffffff;font-family:Arial,sans-serif;font-size:26px;font-weight:bold;text-align:center;line-height:90px;">${esc(initials(v.name))}</div></td>`;
+      }
+      rightCell = `<td style="padding-left:22px;vertical-align:middle;"><img src="${stars}" width="54" height="42" alt="Stellium" style="display:block;" /></td>`;
+    } else {
+      leftCell = `<td style="padding-right:16px;vertical-align:middle;"><img src="${stars}" width="70" height="54" alt="Stellium" style="display:block;" /></td>`;
+    }
+    const gradCell = grad
+      ? `<td style="padding:0;width:3px;"><img src="${grad}" width="3" height="90" alt="" style="display:block;" /></td>`
+      : `<td style="padding:0;width:3px;"><div style="width:3px;height:90px;background:linear-gradient(180deg,#ffffff,#DC216E);"></div></td>`;
+    return `<table cellpadding="0" cellspacing="0" border="0" style="font-family:Arial,sans-serif;border-collapse:collapse;">
+  <tr valign="middle">
+    ${leftCell}
+    ${gradCell}
+    <td style="padding-left:16px;">
+      <p style="margin:0 0 1px 0;font-size:15px;font-weight:bold;color:#0E3145;">${esc(v.name)}</p>
+      <p style="margin:0 0 8px 0;font-size:9px;color:#DC216E;text-transform:uppercase;letter-spacing:1.2px;">${esc(v.role)}</p>
+      <p style="margin:0 0 2px 0;font-size:11px;color:#444;line-height:1.8;">${esc(v.phone)} &nbsp;·&nbsp; <a href="${esc(mailto)}" style="color:#DC216E;text-decoration:none;">${esc(v.email)}</a> &nbsp;·&nbsp; <a href="${esc(linkedinHref)}" style="color:#0E3145;font-weight:bold;text-decoration:none;">in</a></p>
+      <p style="margin:0;font-size:10px;color:#999;">${esc(v.address)}</p>
+    </td>
+    ${rightCell}
+  </tr>
+</table>`;
+  }
+  function render(){
+    document.getElementById('sigPreviewPhoto').innerHTML = build(true);
+    document.getElementById('sigPreviewNoPhoto').innerHTML = build(false);
+  }
+  form.addEventListener('input', render);
+  render();
+  document.querySelectorAll('.sig-copy').forEach(btn=>{
+    btn.addEventListener('click', async ()=>{
+      const html = build(btn.dataset.variant==='photo');
+      try {
+        await navigator.clipboard.write([new ClipboardItem({
+          'text/html': new Blob([html],{type:'text/html'}),
+          'text/plain': new Blob([html],{type:'text/plain'})
+        })]);
+      } catch(e){
+        try { await navigator.clipboard.writeText(html); } catch(_){}
+      }
+      const prev = btn.textContent;
+      btn.textContent = 'Copié ✓';
+      btn.classList.add('copied');
+      clearTimeout(btn._t);
+      btn._t = setTimeout(()=>{ btn.textContent = prev; btn.classList.remove('copied'); }, 1800);
+    });
+  });
+})();
 </script>
 </body>
 </html>
