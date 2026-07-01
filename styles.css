@@ -287,9 +287,9 @@ section.section:last-child { border-bottom: 0; }
 .hero .meta span.dot { width: 4px; height: 4px; border-radius: 999px; background: currentColor; opacity: .4; }
 .hero h1 {
   font-family: 'Euclid Circular A';
-  font-size: clamp(56px, 9vw, 132px);
-  line-height: 0.92;
-  letter-spacing: -0.04em;
+  font-size: clamp(40px, 5.5vw, 76px);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
   font-weight: 500;
   margin: 0 0 28px;
   max-width: 16ch;
