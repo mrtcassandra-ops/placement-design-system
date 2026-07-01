@@ -10,7 +10,13 @@ function b64(filepath) {
 }
 
 function mime(ext) {
-  return { '.png': 'image/png', '.jpg': 'image/jpeg', '.ttf': 'font/truetype', '.woff2': 'font/woff2' }[ext] ?? 'application/octet-stream';
+  return {
+    '.png': 'image/png',
+    '.jpg': 'image/jpeg',
+    '.ttf': 'font/truetype',
+    '.woff2': 'font/woff2',
+    '.pptx': 'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+  }[ext] ?? 'application/octet-stream';
 }
 
 function dataUrl(filepath) {
@@ -68,6 +74,9 @@ html = html.replace(/<meta name="ext-resource-dependency"[^>]+>\s*/g, '');
 
 // Patch asset src attributes: assets/... → data URL
 html = html.replace(/src="(assets\/[^"]+)"/g, (_, relPath) => `src="${assetDataUrl(relPath)}"`);
+
+// Patch download href attributes: href="assets/...")" → data URL (e.g. the .pptx deck)
+html = html.replace(/href="(assets\/[^"]+)"(\s+download)/g, (_, relPath, dl) => `href="${assetDataUrl(relPath)}"${dl}`);
 
 // Patch url() in inline styles: url(assets/...) → data URL
 html = html.replace(/url\((assets\/[^)]+)\)/g, (_, relPath) => `url(${assetDataUrl(relPath)})`);
