@@ -861,51 +861,14 @@
       <div class="subgroup-label">Papeterie</div>
 
       <div class="app-grid" style="grid-template-columns: 1fr;">
-        <!-- Business cards -->
-        <div class="app-tile">
-          <div class="stat-stage">
-            <div class="bizcards">
-              <div class="bizcard recto">
-                <div class="row-top">
-                  <img class="logo-mini" src="assets/logo-stellium-placement.png" alt="Stellium">
-                  <svg class="corner-stars" viewBox="0 0 200 160"><use href="#cluster"/></svg>
-                </div>
-                <div>
-                  <p class="name">Camille Dubois</p>
-                  <p class="role">Conseillère patrimoniale</p>
-                  <div class="divider"></div>
-                  <div class="contact">
-                    <b>+33 1 84 88 32 04</b><br>
-                    camille.dubois@stellium.fr<br>
-                    12 rue de la Paix · 75002 Paris
-                  </div>
-                </div>
-              </div>
-              <div class="bizcard verso">
-                <div class="verso-wrap">
-                  <svg class="stars" style="color:#fff" viewBox="0 0 200 160"><use href="#cluster-mono"/></svg>
-                  <div style="text-align:center">
-                    <div class="verso-word">stellium</div>
-                    <div class="verso-tag">Placement</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="caption">
-            <span class="t">Carte de visite · recto / verso</span>
-            <span class="s">85 × 55 mm</span>
-          </div>
-        </div>
-
         <!-- Email signature with photo -->
         <div class="app-tile">
           <div class="letterhead-stage" style="display:grid;place-items:center;">
             <div style="background:#ffffff;border-radius:12px;padding:30px 34px;box-shadow:0 30px 60px -30px rgba(7,18,28,.5);">
-              <table cellpadding="0" cellspacing="0" border="0" style="font-family:Arial,Helvetica,sans-serif;border-collapse:collapse;">
+              <table cellpadding="0" cellspacing="0" border="0" style="font-family:'Euclid Circular A',Arial,Helvetica,sans-serif;border-collapse:collapse;">
                 <tbody><tr style="vertical-align:middle;">
                   <td style="padding-right:16px;vertical-align:middle;">
-                    <div style="width:72px;height:90px;border-radius:10px;background:#0E3145;color:#ffffff;font-family:Arial,sans-serif;font-size:26px;font-weight:bold;text-align:center;line-height:90px;">CD</div>
+                    <div style="width:72px;height:90px;border-radius:10px;background:#0E3145;color:#ffffff;font-family:'Euclid Circular A',Arial,sans-serif;font-size:26px;font-weight:bold;text-align:center;line-height:90px;">CD</div>
                   </td>
                   <td style="padding:0;width:3px;"><div style="width:3px;height:90px;background:linear-gradient(180deg,#ffffff,#DC216E);"></div></td>
                   <td style="padding-left:16px;vertical-align:middle;">
@@ -1262,7 +1225,7 @@ sections.forEach(s => observer.observe(s));
       if(v.photoUrl){
         leftCell = `<td style="padding-right:16px;vertical-align:middle;"><img src="${esc(v.photoUrl)}" width="72" height="90" alt="${esc(v.name)}" style="display:block;width:72px;height:90px;border-radius:10px;object-fit:cover;" /></td>`;
       } else {
-        leftCell = `<td style="padding-right:16px;vertical-align:middle;"><div style="width:72px;height:90px;border-radius:10px;background:#0E3145;color:#ffffff;font-family:Arial,sans-serif;font-size:26px;font-weight:bold;text-align:center;line-height:90px;">${esc(initials(v.name))}</div></td>`;
+        leftCell = `<td style="padding-right:16px;vertical-align:middle;"><div style="width:72px;height:90px;border-radius:10px;background:#0E3145;color:#ffffff;font-family:'Euclid Circular A',Arial,sans-serif;font-size:26px;font-weight:bold;text-align:center;line-height:90px;">${esc(initials(v.name))}</div></td>`;
       }
       rightCell = `<td style="padding-left:22px;vertical-align:middle;"><img src="${stars}" width="54" height="42" alt="Stellium" style="display:block;" /></td>`;
     } else {
@@ -1271,7 +1234,7 @@ sections.forEach(s => observer.observe(s));
     const gradCell = grad
       ? `<td style="padding:0;width:3px;"><img src="${grad}" width="3" height="90" alt="" style="display:block;" /></td>`
       : `<td style="padding:0;width:3px;"><div style="width:3px;height:90px;background:linear-gradient(180deg,#ffffff,#DC216E);"></div></td>`;
-    return `<table cellpadding="0" cellspacing="0" border="0" style="font-family:Arial,sans-serif;border-collapse:collapse;">
+    return `<table cellpadding="0" cellspacing="0" border="0" style="font-family:'Euclid Circular A',Arial,sans-serif;border-collapse:collapse;">
   <tr valign="middle">
     ${leftCell}
     ${gradCell}
